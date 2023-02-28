@@ -1,8 +1,8 @@
 import * as model from './model.js';
 import recipeView from './views/recipeView.js';
-import Fraction from 'fractional';
+
 import searchView from './views/searchView.js';
-import icons from 'url:../img/icons.svg';
+
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import resultsView from '../js/views/resultsView.js';
@@ -109,10 +109,6 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
-const newFeature = function () {
-  console.log('Welcome to the application');
-};
-
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -121,7 +117,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('TEST GIT');
 };
 
 init();
